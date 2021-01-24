@@ -20,6 +20,9 @@
         <action
             android:id="@+id/action_DashboardFragment_to_Question1Fragment"
             app:destination="@id/navigation_question1" />
+        <action
+            android:id="@+id/action_DashboardFragment_to_GraphFragment"
+            app:destination="@id/navigation_graph" />
     </fragment>
 
     <fragment
@@ -33,4 +36,10 @@
         android:name="com.example.qwertracker.ui.questions.Question1Fragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_question1" />
+
+    <fragment
+        android:id="@+id/navigation_graph"
+        android:name="com.example.qwertracker.ui.graph.GraphFragment"
+        android:label="TODO Graph"
+        tools:layout="@layout/fragment_graph" />
 </navigation>

@@ -44,5 +44,13 @@ public class DashboardFragment extends Fragment {
                         .navigate(R.id.action_DashboardFragment_to_Question1Fragment);
             }
         });
+
+        view.findViewById(R.id.buttonGraph).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(DashboardFragment.this)
+                        .navigate(R.id.action_DashboardFragment_to_GraphFragment);
+            }
+        });
     }
 }
