@@ -4,15 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".ui.graph.GraphFragment">
 
-    <com.jjoe64.graphview.GraphView
-        android:id="@+id/graph"
-        android:layout_width="match_parent"
-        android:layout_height="200dip"
-        android:layout_marginTop="-8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
     <!-- This stuff was for the user input numbers -->
     <!--
     <LinearLayout
@@ -126,6 +120,14 @@
     </LinearLayout>
 -->
 
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graph"
+        android:layout_width="match_parent"
+        android:layout_height="300dip"
+        android:layout_marginTop="96dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/addButton"
         android:layout_width="wrap_content"
@@ -161,7 +163,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="32dp"
         android:text="Anxiety"
         app:backgroundTint="#75C7EA"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -175,7 +177,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="32dp"
         android:text="Anger"
         app:backgroundTint="#F2B7B8"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -188,7 +190,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="32dp"
         android:text="View all"
         android:textColor="@android:color/darker_gray"
         app:backgroundTint="#F9D8CE"
