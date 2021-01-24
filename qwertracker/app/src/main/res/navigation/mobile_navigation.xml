@@ -34,8 +34,46 @@
     <fragment
         android:id="@+id/navigation_question1"
         android:name="com.example.qwertracker.ui.questions.Question1Fragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_question1" />
+        android:label="Question 1"
+        tools:layout="@layout/fragment_question1">
+
+        <action
+            android:id="@+id/action_Question1Fragment_to_Question2Fragment"
+            app:destination="@id/navigation_question2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_question2"
+        android:name="com.example.qwertracker.ui.questions.Question2Fragment"
+        android:label="Question 2"
+        tools:layout="@layout/fragment_question2">
+
+        <action
+            android:id="@+id/action_Question2Fragment_to_Question3Fragment"
+            app:destination="@id/navigation_question3" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_question3"
+        android:name="com.example.qwertracker.ui.questions.Question3Fragment"
+        android:label="Question 3"
+        tools:layout="@layout/fragment_question3">
+
+        <action
+            android:id="@+id/action_Question3Fragment_to_Question4Fragment"
+            app:destination="@id/navigation_question4" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_question4"
+        android:name="com.example.qwertracker.ui.questions.Question4Fragment"
+        android:label="Question 4"
+        tools:layout="@layout/fragment_question4">
+
+        <action
+            android:id="@+id/action_Question4Fragment_to_GraphFragment"
+            app:destination="@id/navigation_graph" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_graph"
