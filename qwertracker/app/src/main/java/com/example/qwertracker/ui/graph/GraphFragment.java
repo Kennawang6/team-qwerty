@@ -14,7 +14,10 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.qwertracker.MainActivity;
 import com.example.qwertracker.R;
+import com.example.qwertracker.data.AppDatabase;
+import com.example.qwertracker.data.SurveyResponseDao;
 import com.example.qwertracker.ui.dashboard.DashboardViewModel;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
@@ -26,9 +29,23 @@ public class GraphFragment extends Fragment {
     EditText firstNum_3, secondNum_3;
     EditText firstNum_4, secondNum_4;
 
+    SurveyResponseDao accessor;
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        MainActivity activity = ((MainActivity) getActivity());
+        if (activity == null) {
+            // BIG TROUBLE, shouldn't happen
+            System.err.println("Graph Fragment could not find activity. This is a problem!");
+        } else {
+            accessor = activity.getAccessor();
+        }
+        /* TODO the following code might (I didn't try it) be able to query survey responses entered in the past 100000000 seconds
+        long currentTime = System.getTimeMillis();
+        List<SurveyResponse> response = accessor.getResponsesBetween(currentTime - 100000000000, currentTime);
+         */
     }
 
     @Override
